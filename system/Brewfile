@@ -21,6 +21,7 @@ tap "homebrew/services"
 # via Homebrew.
 ##
 
+brew "antibody"
 brew "automake"
 brew "awk"
 brew "base64"
