@@ -1,0 +1,85 @@
+[user]
+  name = Chris Everson
+  email = chris@chriseverson.net
+  signingkey = EF82E7833365CE4D
+
+[alias]
+  a = add
+  aa = add --all
+  ca = commit --all
+  cam = commit --all --message
+  plr = pull --rebase origin
+  snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
+  snapshots = !git stash list --grep snapshot
+  tdel = tag --delete
+  tlist = tag --list
+  tpush = push --tags
+  unc = reset HEAD~
+
+[color]
+  ui = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  commit = green bold
+  frag = magenta bold
+  meta = yellow bold
+  new = green bold
+  newMoved = cyan
+  old = red bold
+  oldMoved = blue
+  whitespace = red reverse
+
+[color "diff-highlight"]
+  newHighlight = green bold 22
+  newNormal = green bold
+  oldHighlight = red bold 52
+  oldNormal = red bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[commit]
+  gpgSign = true
+
+[core]
+  editor = subl --new-window --wait
+  excludesfile = ~/.gitignore
+  pager = diff-so-fancy
+  precomposeUnicode = true
+
+[core "whitespace"]
+  blank-at-eof=true
+
+[fetch]
+  prune = true
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  process = git-lfs filter-process
+  required = true
+  smudge = git-lfs smudge -- %f
+
+[github]
+  user = chriseverson
+
+[help]
+  autocorrect = true
+
+[http]
+  sslVerify = true
+
+[push]
+    default = current
+
+[rerere]
+  enabled = 1
+
+[tag]
+  gpgSign = true
