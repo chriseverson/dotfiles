@@ -1,0 +1,30 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"ayu",
+		"Base16 Color Schemes",
+		"Color Highlighter",
+		"Dotfiles Syntax Highlighting",
+		"DoxyDoxygen",
+		"EditorConfig",
+		"Git",
+		"GitGutter",
+		"JavaScriptNext - ES6 Syntax",
+		"Laravel Blade Highlighter",
+		"nginx",
+		"Package Control",
+		"PHP Companion",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"TypeScript Syntax",
+		"Vue Syntax Highlight",
+		"WooCommerce Autocomplete",
+		"WordPress"
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"autocomplete": false,
+	"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
+	"default_line_ending": "unix",
+	"drag_text": false,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"._*",
+		"Thumbs.db",
+		".Trashes"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		"node_modules"
+	],
+	"font_face": "Roboto Mono",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"line_padding_bottom": 5,
+	"mini_diff": "auto",
+	"preview_on_click": false,
+	"remember_open_files": false,
+	"rulers":
+	[
+		80,
+		100
+	],
+	"scroll_past_end": true,
+	"tab_size": 4,
+	"theme": "ayu-dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"ui_separator": true,
+	"word_wrap": false,
+	"wrap_width": 80
+}

@@ -1,0 +1,111 @@
+[
+    {"id": "side-bar-files-open-with",
+        "children":
+        [
+
+            // Images
+            {
+                "caption": "Photoshop",
+                "id": "side-bar-files-open-with-photoshop",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "Adobe Photoshop 2020.app",
+                    "extensions":"psd|png|jpg|jpeg",
+                    "args":[]
+                }
+            },
+            {
+                "caption": "Illustrator",
+                "id": "side-bar-files-open-with-illustrator",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "Adobe Illustrator 2020.app",
+                    "extensions":"ai|svg|eps",
+                    "args":[]
+                }
+            },
+            {
+                "caption": "ImageOptim",
+                "id": "side-bar-files-open-with-imageoptim",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "ImageOptim.app",
+                    "extensions":"png|jpg|jpeg|gif",
+                    "args":[]
+                }
+            },
+
+            //separator
+            {"caption":"-"},
+
+            // Text
+            {
+                "caption": "Typora",
+                "id": "side-bar-files-open-with-typora",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "Typora.app",
+                    "extensions": "md",
+                    "args":[]
+                }
+            },
+
+            {"caption":"-"},
+
+            {
+                "caption": "Numbers",
+                "id": "side-bar-files-open-with-numbers",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "Numbers.app",
+                    "extensions": "csv|xls",
+                    "args":[]
+                }
+            },
+
+            {"caption":"-"},
+
+            // Browsers
+            {
+                "caption": "Chrome",
+                "id": "side-bar-files-open-with-chrome",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "Google Chrome.app",
+                    "extensions":".*",
+                    "args":[]
+                }
+            },
+            {
+                "caption": "Safari",
+                "id": "side-bar-files-open-with-safari",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "Safari.app",
+                    "extensions":".*",
+                    "args":[]
+                }
+            },
+            {
+                "caption": "Firefox",
+                "id": "side-bar-files-open-with-firefox",
+                "command": "side_bar_files_open_with",
+                "args": {
+                    "paths": [],
+                    "application": "Firefox.app",
+                    "extensions":".*",
+                    "args":[]
+                }
+            },
+
+            {"caption":"-"}
+        ]
+    }
+]

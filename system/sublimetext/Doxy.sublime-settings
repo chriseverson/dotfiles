@@ -1,0 +1,28 @@
+// Settings in here override those in "${packages}/DoxyDoxygen/Doxy.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+    "min_spaces_between_columns": [1, 1],
+    "preferred_tabs_sizes": [2],
+    "preferred_comments_styles": [
+        [
+            "/**",
+            " *"
+        ],
+        [
+            ["/* ", "-", " */"],   // <=> /*-------------------*//**
+            " *"
+        ],
+        [
+            ["// ", "-"],            // <=> //------------------------
+            "// "
+        ],
+        [
+            "##",
+            "#"
+        ],
+        [
+            ["#", "-"],             // <=> #-------------------------
+            "##"
+        ]
+    ]
+}
