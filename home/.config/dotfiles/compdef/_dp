@@ -1,0 +1,2 @@
+#compdef dp
+_path_files -W $HOME/Development/projects -/

@@ -1,0 +1,2 @@
+#compdef dw
+_path_files -W $HOME/Development/www -/

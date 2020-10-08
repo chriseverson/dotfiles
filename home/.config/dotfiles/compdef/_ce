@@ -1,0 +1,2 @@
+#compdef ce
+_path_files -W $HOME -/

@@ -1,0 +1,34 @@
+# Editor
+export EDITOR=$(which nano)
+export VISUAL="subl --new-window --wait"
+
+# Zsh history
+export HISTFILE="$HOME/.zhistory"
+export HISTSIZE="25600"
+export SAVEHIST="${HISTSIZE}"
+
+# Language
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# Manual pages
+export LESS_TERMCAP_md="$(printf '\e[1;31m')"
+export MANPAGER="less -X"
+
+# Golang
+export GOPATH="${HOME}/go"
+
+# Pure prompt
+export PURE_CMD_MAX_EXEC_TIME=10
+
+# Homebew
+export HOMEBREW_NO_ANALYTICS=1
+
+# Nvm
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Node
+export NODE_REPL_HISTORY=~/.node_history;
+export NODE_REPL_HISTORY_SIZE='32768';

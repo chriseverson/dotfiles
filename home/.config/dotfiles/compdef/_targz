@@ -1,0 +1,3 @@
+#compdef targz
+
+_path_files

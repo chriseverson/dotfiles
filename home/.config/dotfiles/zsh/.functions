@@ -1,0 +1,169 @@
+#######################################
+# Shortcut for `cd ~`
+#
+# Arguments:
+#   subdirectory
+#######################################
+ce() {
+  cd "${HOME}/${1}"
+}
+
+#######################################
+# Shortcut for `cd ~/Downloads`
+#
+# Arguments:
+#   subdirectory
+#######################################
+dl() {
+  cd "${HOME}/Downloads/${1}"
+}
+
+#######################################
+# Shortcut for `cd ~/Development`
+#
+# Arguments:
+#   subdirectory
+#######################################
+dv() {
+  cd "${HOME}/Development/${1}"
+}
+
+#######################################
+# Shortcut for `cd ~/Development/projects`
+#
+# Arguments:
+#   subdirectory
+#######################################
+dp() {
+  cd "${HOME}/Development/projcts/${1}"
+}
+
+#######################################
+# Shortcut for `cd ~/Development/www`
+#
+# Arguments:
+#   subdirectory
+#######################################
+dw() {
+  cd "${HOME}/Development/www/${1}"
+}
+
+#######################################
+# Shortcut for `cd && ls`
+#
+# Arguments:
+#   directory
+#######################################
+cdl() {
+  cd "${1}" && ls -la
+}
+
+#######################################
+# Make a directory and hop inside.
+#
+# Arguments:
+#   directory
+#######################################
+mcd() {
+  mkdir -p "${@}" && cd "${_}"
+}
+
+#######################################
+# Basic calculator.
+#
+# Arguments:
+#   source url, destination file path
+#######################################
+calc() {
+  local result=""
+
+  result="$(printf "scale=10;%s\n" "${*}" | bc --mathlib | tr -d '\\\n')"
+
+  if [[ "${result}" == *.* ]]; then
+    printf "%s" "${result}" | sed -e 's/^\./0./' -e 's/^-\./-0./' -e 's/0*$//;s/\.$//'
+  else
+    printf "${result}"
+  fi
+
+  printf "\n"
+}
+
+#######################################
+# Download a remote file.
+#
+# Arguments:
+#   source url, destination file path
+#######################################
+download() {
+  local src="${1}"
+  local dest="${2}"
+
+  if command -v "curl" &> /dev/null; then
+    curl -LsSo "${dest}" "${src}" &> /dev/null
+    return $?
+  elif command -v "wget" &> /dev/null; then
+    wget -qO "${dest}" "${src}" &> /dev/null
+    return $?
+  fi
+
+  return 1
+}
+
+#######################################
+# Pop off on a .tar.gz archive.
+#
+# Arguments:
+#   source path
+#######################################
+targz() {
+  local tmp_file="${1%/}.tar"
+
+  tar -cvf "${tmp_file}" --exclude=".DS_Store" "${1}" || return 1
+
+  local size=$(
+    stat -f"%z" "${tmpFile}" 2> /dev/null;
+    stat -c"%s" "${tmp_file}" 2> /dev/null
+  )
+
+  local cmd=""
+
+  if [[ $((${size} < 52428800 )) ]] && [[ $(hash zopfli 2> /dev/null) ]]; then
+    cmd="zopfli"
+  elif [[ $(hash pigz 2> /dev/null) ]]; then
+    cmd="pigz"
+  else
+    cmd="gzip"
+  fi
+
+  echo "Compressing .tar using \`${cmd}\`…"
+
+  "${cmd}" -v "${tmp_file}" || return 1
+
+  [ -f "${tmp_file}" ] && rm "${tmp_file}"
+
+  echo "${tmp_file}.gz created successfully."
+}
+
+#######################################
+# Peep on the weather.
+#
+# Arguments:
+#   location(s) - defaults to HOU, MEL
+# Example:
+#   `wxr austin san+francisco`
+#   `wxr KSEA YSSY`
+#######################################
+wxr() {
+  local loc
+
+  if [[ ${#@} < 1 ]]; then
+    loc="Melbourne,Houston,Seattle"
+  else
+    loc="$(echo ${@} | tr ' ' ',')"
+  fi
+
+  local url="https://wttr.in/{${loc}}?format=%l:+%c+%20%C+%20%w+%20[%t]\n"
+  # local url="https://wttr.in/{${loc}}?format=3"
+
+  curl -s "${url}"
+}

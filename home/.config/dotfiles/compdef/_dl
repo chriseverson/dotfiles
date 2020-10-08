@@ -1,0 +1,2 @@
+#compdef dl
+_path_files -W $HOME/Downloads -/
