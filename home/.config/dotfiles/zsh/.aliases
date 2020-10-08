@@ -1,0 +1,84 @@
+# Directory navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Listers
+alias ls="ls -AFhg --color --group-directories-first"
+alias lsd="ls | grep '^d'"
+
+# Permissions
+alias chmox='chmod +x'
+
+# Hosts
+alias hosts='sudo $EDITOR /etc/hosts'
+
+# Recursively delete `.DS_Store` files
+alias cleanup='find . -type f -name "*.DS_Store" -ls -delete'
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+# NVM
+alias nup='nvm install --lts && nvm alias default "lts/*"'
+
+# Copy public key to clipboard
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo 'Public key copied to pasteboard.'"
+
+# Reload z-shell.
+alias reload="exec "${SHELL}" -l"
+
+# Flush Directory Service cache
+alias flushdns="dscacheutil -flushcache"
+
+# Untargz
+alias untar='tar xvf'
+
+# IP addresses
+alias ipp="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ipl="ipconfig getifaddr en0"
+
+# Always enable colored `grep` output
+alias grep='grep --color=auto '
+
+# Git
+alias g='git status -sb'
+alias gs='git status -sb'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gac='git add -a && git commit -m'
+alias pull='git pull prune'
+alias push='git push'
+alias unpush='git push -f origin HEAD^:master'
+alias master='git checkout master'
+alias staging='git checkout staging'
+
+alias git-iamright="git pull -Xtheirs --rebase"
+alias git-iamwrong="git pull -Xtheirs"
+
+# Laravel
+alias artisan='php artisan'
+
+# Composer
+alias recompose='rm -rf vendor composer.lock && composer install'
+alias recomposewp='rm -rf vendor composer.lock public/core public/wp'
+
+# Yarn
+alias reyarn='rm -rf node_modules yarn.lock && yarn'
+alias yd='yarn dev'
+alias yp='yarn prod'
+alias yp='yarn build'
+alias yw='yarn watch'
+alias ylint='yarn lint'
+alias yfix='yarn fix'
+
+# npm
+alias renpm='rm -rf node_modules package-lock.json && npm install'
+alias ndev='npm run dev'
+alias nprod='npm run prod'
+alias nlint='npm run lint'
+alias nfix='npm run fix'
+alias nstart='npm run start'
+alias ntest='npm run test'
+alias nwatch='npm run watch'
