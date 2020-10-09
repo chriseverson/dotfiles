@@ -148,7 +148,7 @@ targz() {
 # Peep on the weather.
 #
 # Arguments:
-#   location(s) - defaults to HOU, MEL
+#   location(s) - defaults to Essendon, Houston-Hobby, and Bremerton airports
 # Example:
 #   `wxr austin san+francisco`
 #   `wxr KSEA YSSY`
@@ -157,13 +157,12 @@ wxr() {
   local loc
 
   if [[ ${#@} < 1 ]]; then
-    loc="Melbourne,Houston,Seattle"
+    loc="YMEN,KHOU,KPWT"
   else
     loc="$(echo ${@} | tr ' ' ',')"
   fi
 
   local url="https://wttr.in/{${loc}}?format=%l:+%c+%20%C+%20%w+%20[%t]\n"
-  # local url="https://wttr.in/{${loc}}?format=3"
 
   curl -s "${url}"
 }
