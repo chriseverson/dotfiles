@@ -166,3 +166,24 @@ wxr() {
 
   curl -s "${url}"
 }
+
+#######################################
+# Display some commonly referenced date/times.
+#######################################
+tz() {
+  local format="%I:%M%p – %a %b %d"
+
+  echo "UTC        |  $(TZ='Etc/UTC' date +${format})\n"
+
+  echo "Melbourne  |  $(TZ='Australia/Melbourne' date +${format})"
+  echo "Perth      |  $(TZ='Australia/Perth' date +${format})\n"
+
+  echo "Seattle    |  $(TZ='America/Los_Angeles' date +${format})"
+  echo "Denver     |  $(TZ='America/Denver' date +${format})"
+  echo "Arizona    |  $(TZ='America/Phoenix' date +${format})"
+  echo "Houston    |  $(TZ='America/Chicago' date +${format})"
+  echo "New York   |  $(TZ='America/New_York' date +${format})\n"
+
+  echo "London     |  $(TZ='Europe/London' date +${format})"
+  echo "Berlin     |  $(TZ='Europe/Berlin' date +${format})"
+}
