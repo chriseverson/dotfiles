@@ -1,0 +1,13 @@
+# Antibody manifest
+# Build with `$ antibody bundle < .zplugins > .antibody`
+# Update with `$ antibody update`
+
+djui/alias-tips
+rupa/z
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+# Need to be at end
+mafredri/zsh-async
+sindresorhus/pure
+zdharma/fast-syntax-highlighting
