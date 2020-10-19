@@ -35,7 +35,7 @@ dv() {
 #   subdirectory
 #######################################
 dp() {
-  cd "${HOME}/Development/projcts/${1}"
+  cd "${HOME}/Development/projects/${1}"
 }
 
 #######################################
