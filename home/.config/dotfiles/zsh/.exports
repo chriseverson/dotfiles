@@ -24,6 +24,9 @@ export PURE_CMD_MAX_EXEC_TIME=10
 # Homebew
 export HOMEBREW_NO_ANALYTICS=1
 
+# Composer
+export COMPOSER_MEMORY_LIMIT=-1
+
 # Nvm
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
