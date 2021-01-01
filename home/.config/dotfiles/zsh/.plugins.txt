@@ -6,6 +6,8 @@ djui/alias-tips
 rupa/z
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
+ohmyzsh/ohmyzsh path:plugins/npm
+ohmyzsh/ohmyzsh path:plugins/composer
 
 # Need to be at end
 mafredri/zsh-async
