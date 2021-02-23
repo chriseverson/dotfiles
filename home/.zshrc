@@ -29,6 +29,15 @@ setopt AUTO_CD
 setopt AUTO_MENU
 setopt AUTO_PUSHD
 
+# Settings : History
+############################################################
+
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_VERIFY
+setopt INC_APPEND_HISTORY
+
 # Settings :: Completion
 ############################################################
 
