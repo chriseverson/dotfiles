@@ -1,0 +1,35 @@
+# Set default handler for code-related files.
+#
+# Link: http://duti.sourceforge.net/documentation.php
+# Link: https://github.com/moretension/duti
+#
+# bundle id         UTI/ext/MIME    role
+
+com.sublimetext.3   css             all
+com.sublimetext.3   js              all
+com.sublimetext.3   json            all
+com.sublimetext.3   less            all
+com.sublimetext.3   php             all
+com.sublimetext.3   plist           all
+com.sublimetext.3   sass            all
+com.sublimetext.3   scss            all
+com.sublimetext.3   sh              all
+com.sublimetext.3   stylus          all
+com.sublimetext.3   txt             all
+com.sublimetext.3   vue             all
+com.sublimetext.3   xml             all
+com.sublimetext.3   yaml            all
+com.sublimetext.3   yml             all
+com.sublimetext.3   zsh             all
+
+com.sublimetext.3   .env            all
+com.sublimetext.3   .gitconfig      all
+com.sublimetext.3   .gitignore      all
+com.sublimetext.3   .npmrc          all
+com.sublimetext.3   .zshrc          all
+com.sublimetext.3   .babelrc        all
+com.sublimetext.3   .editorconfig   all
+com.sublimetext.3   .babelrc        all
+
+abnerworks.Typora   md              all
+abnerworks.Typora   markdown        all

@@ -9,3 +9,7 @@ end_of_line = lf
 
 [*.md,*.txt]
 trim_trailing_whitespace = false
+
+[*.duti]
+intent_style = tab
+indent_size = 4
