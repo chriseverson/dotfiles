@@ -35,3 +35,5 @@ export NVM_DIR="$HOME/.nvm"
 # Node
 export NODE_REPL_HISTORY=~/.node_history;
 export NODE_REPL_HISTORY_SIZE='32768';
+
+[ -f "${HOME}/.exports-private" ] && source "${HOME}/.exports-private"
