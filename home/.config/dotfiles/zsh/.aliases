@@ -82,3 +82,7 @@ alias nfix='npm run fix'
 alias nstart='npm run start'
 alias ntest='npm run test'
 alias nwatch='npm run watch'
+
+# gulp
+# @todo properly fix autocorrect issue
+alias gulp='nocorrect gulp'
