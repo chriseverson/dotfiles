@@ -109,6 +109,37 @@ download() {
   return 1
 }
 
+########################################
+# Extract an archive
+#
+# Arguments:
+#   source file(s)
+########################################
+extract() {
+  for file in "$@"; do
+    if [[ -f "$file" ]]; then
+      case "$file" in
+        *.7z)             7z x $file        ;;
+        *.bz2)            bunzip2 $file     ;;
+        *.gz)             gunzip $file      ;;
+        *.rar)            unrar x $file     ;;
+        *.tar)            tar xvf $file     ;;
+        *.tar.bz2|*.tbz2) tar xvjf $file    ;;
+        *.tar.gz|*.tgz)   tar xvzf $file    ;;
+        *.Z)              uncompress $file  ;;
+        *.zip)            unzip $file       ;;
+        *)
+          echo "extract: '${file}' – unknown archive type"
+          return 1
+          ;;
+       esac
+    else
+     echo "extract: '${file}' does not exist."
+     return 1
+    fi
+  done
+}
+
 #######################################
 # Pop off on a .tar.gz archive.
 #
