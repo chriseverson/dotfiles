@@ -48,6 +48,7 @@ brew "nginx", restart_service: true
 brew "node"
 brew "nvm"
 brew "openssl"
+brew "p7zip"
 brew "php", restart_service: true
 brew "pkg-config"
 brew "python"
