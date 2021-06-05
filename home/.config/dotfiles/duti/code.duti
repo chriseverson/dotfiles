@@ -1,4 +1,4 @@
-# Set default handler for code-related files.
+# Duti definitions for code-related files.
 #
 # Link: http://duti.sourceforge.net/documentation.php
 # Link: https://github.com/moretension/duti
@@ -33,3 +33,4 @@ com.sublimetext.3   .babelrc        all
 
 abnerworks.Typora   md              all
 abnerworks.Typora   markdown        all
+
