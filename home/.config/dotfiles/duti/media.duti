@@ -1,0 +1,33 @@
+# Duti definitions for media-related files.
+#
+# Link: http://duti.sourceforge.net/documentation.php
+# Link: https://github.com/moretension/duti
+#
+# bundle id         UTI/ext/MIME    role
+
+org.videolan.vlc    mp3             all
+org.videolan.vlc    wav             all
+org.videolan.vlc    aiff            all
+org.videolan.vlc    alac            all
+org.videolan.vlc    flac            all
+org.videolan.vlc    m4a             all
+org.videolan.vlc    ogg             all
+org.videolan.vlc    oga             all
+org.videolan.vlc    ra              all
+org.videolan.vlc    wma             all
+
+org.videolan.vlc    webm            all
+org.videolan.vlc    ogv             all
+org.videolan.vlc    avi             all
+org.videolan.vlc    mov             all
+org.videolan.vlc    wmv             all
+org.videolan.vlc    rm              all
+org.videolan.vlc    asf             all
+org.videolan.vlc    mp4             all
+org.videolan.vlc    m4p             all
+org.videolan.vlc    mpeg            all
+org.videolan.vlc    m4v             all
+org.videolan.vlc    flv             all
+org.videolan.vlc    f4v             all
+
+com.apple.logic10    au             all
