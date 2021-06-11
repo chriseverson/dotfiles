@@ -36,7 +36,7 @@ alias flushdns="dscacheutil -flushcache"
 alias untar='tar xvf'
 
 # IP addresses
-alias ipp="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ipp="curl ifconfig.me && echo"
 alias ipl="ipconfig getifaddr en0"
 
 # Always enable colored `grep` output
