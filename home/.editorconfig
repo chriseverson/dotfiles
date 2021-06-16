@@ -1,0 +1,17 @@
+root = true
+
+[*]
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_new_line = true
+indent_style = space
+indent_size = 4
+
+[*.{js,ts,esm,vue,json,yaml,yml}]
+indent_size = 2
+
+[*.{sass,scss,css}]
+indent_size = 2
+
+[*.{md,txt}]
+trim_trailing_whitespace = false
