@@ -8,7 +8,7 @@
 # Variables
 ################################################################################
 
-systemname=CEMBP
+systemname=CEMINI1
 devdir="${HOME}/Development"
 
 
@@ -31,7 +31,7 @@ mkdir -p "${HOME}/Screenshots"
 mkdir -p "${devdir}/www"
 mkdir -p "${devdir}/projects"
 mkdir -p "${devdir}/sublimetext"
-mkdir -p "${devdir}/mysqldump"
+mkdir -p "${devdir}/mysql"
 
 
 ################################################################################
