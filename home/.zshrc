@@ -9,7 +9,6 @@ export DOTFILES="${HOME}/.config/dotfiles"
 fpath=("${DOTFILES}/compdef" "${fpath[@]}")
 
 autoload -Uz compinit && compinit -i
-#autoload -Uz projects
 
 # Imports
 ############################################################
@@ -47,6 +46,15 @@ zstyle ':completion:*' list-suffixes
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' menu select=2
 zstyle ':completion::complete:*' gain-privileges 1
+
+# Pure prompt :: Apple silicon workaround
+# See: https://github.com/sindresorhus/pure/issues/584
+############################################################
+
+fpath+="${DOTFILES}/zsh/prompt/pure"
+
+autoload -U promptinit; promptinit
+prompt pure
 
 # Color
 ############################################################
