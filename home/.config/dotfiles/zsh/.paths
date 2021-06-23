@@ -16,7 +16,7 @@ export PATH="/usr/local/go/bin:${GOPATH}/bin:${PATH}"
 
 export CLICOLOR=1
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/opt/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
 
 export PATH=$PATH:$HOME/bin
