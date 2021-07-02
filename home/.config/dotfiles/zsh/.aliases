@@ -30,7 +30,7 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo 'Public key copied to paste
 alias reload="exec "${SHELL}" -l"
 
 # Flush Directory Service cache
-alias flushdns="dscacheutil -flushcache"
+alias flushdns="sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache"
 
 # Untargz
 alias untar='tar xvf'
