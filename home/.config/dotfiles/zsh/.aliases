@@ -86,3 +86,6 @@ alias nwatch='npm run watch'
 # gulp
 # @todo properly fix autocorrect issue
 alias gulp='nocorrect gulp'
+
+# xcode ios simulator
+alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
