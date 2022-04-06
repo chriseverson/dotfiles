@@ -218,3 +218,21 @@ tz() {
   echo "London     |  $(TZ='Europe/London' date +${format})"
   echo "Berlin     |  $(TZ='Europe/Berlin' date +${format})"
 }
+
+#######################################
+# Kill a process on a given port
+#
+# Arguments:
+#   port - the port to target 
+# Example
+#   `kill_port 8080``
+#######################################
+kill_port() {
+  local port="$1"
+
+  if [[ -z "$port" ]]; then
+    echo "kill_port: no port defined (example: kill_port 8080)"
+  else
+    kill -9 `lsof -w -n -i tcp:$port | awk '$2!="PID" {print $2;}'` 
+  fi
+}
