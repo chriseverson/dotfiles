@@ -59,6 +59,7 @@ alias git-iamwrong="git pull -Xtheirs"
 
 # Laravel
 alias artisan='php artisan'
+alias art='php artisan'
 
 # Composer
 alias recompose='rm -rf vendor composer.lock && composer install'
