@@ -1,6 +1,6 @@
 # Editor
 export EDITOR=$(which nano)
-export VISUAL="subl --new-window --wait"
+export VISUAL="code"
 
 # Zsh history
 export HISTFILE="$HOME/.zhistory"
